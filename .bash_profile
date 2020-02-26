@@ -18,6 +18,10 @@ alias moon='curl -4 http://wttr.in/Moon'
 alias cd..='cd ..'
 alias cd~='cd ~'
 alias dir='ls'
+alias copy='cp'
+alias del='rm'
+alias vim='sudo vim'
+alias perm='sudo chmod a+rwx'
 
 # editing and reloading bash profile
 alias ebash='sudo vim ~/.bash_profile'
@@ -26,12 +30,6 @@ alias rbash='source ~/.bash_profile'
 # colours for `ls` command
 alias ls='ls -G'
 alias lsa='ls -la'
-
-# bat rules
-alias cat='bat'
-
-# vim
-alias vim="/usr/local/bin/vim"
 
 # webapps
 alias milk="open -na 'Google Chrome' --args '--app=https://www.rememberthemilk.com/app '"
