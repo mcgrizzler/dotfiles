@@ -22,6 +22,8 @@ alias copy='cp'
 alias del='rm'
 alias vim='sudo vim'
 alias perm='sudo chmod a+rwx'
+alias update='~/scripts/update-all'
+alias windows='~/scripts/shazam'
 
 # editing and reloading bash profile
 alias ebash='sudo vim ~/.bash_profile'
