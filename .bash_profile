@@ -1,20 +1,11 @@
-export LC_ALL=en_US.UTF-8  
-export LANG=en_US.UTF-8
+# Bash Profile
 
-# git
-export GIT_PS1_SHOWDIRTYSTATE=true
-export GIT_PS1_SHOWUNTRACKEDFILES=true
-export GIT_PS1_SHOWCOLORHINTS=true
+# Prompt Color / Text
+export PS1="😺 \[\033[38;5;85m\]\u\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;214m\]\t\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;105m\]\w\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;47m\]>\[$(tput sgr0)\]\[\033[38;5;62m\]:\[$(tput sgr0)\]"
 
-# prompt
-export PS1='😺\[\e[0;31m\]\[\e[0;31m\] \W\[\033[1;32m\]$(__git_ps1 " (%s)")\[\e[0;33m\]: '
+# Aliases
 
-# aliases
-# weather and the moon
-alias weather='curl -4 http://wttr.in/'
-alias moon='curl -4 http://wttr.in/Moon'
-
-# command alternatives
+# Commands
 alias cd..='cd ..'
 alias cd~='cd ~'
 alias dir='ls'
@@ -22,17 +13,19 @@ alias copy='cp'
 alias del='rm'
 alias vim='sudo vim'
 alias perm='sudo chmod a+rwx'
-alias update='~/scripts/update-all'
-alias windows='~/scripts/shazam'
+alias updateall='sudo apt update && sudo apt upgrade -y && sudo apt autoremove'
 
-# editing and reloading bash profile
+# Script references
+alias update='~/scripts/update-all'
+
+# Edit/Reload .bash_profile
 alias ebash='sudo vim ~/.bash_profile'
 alias rbash='source ~/.bash_profile'
 
-# colours for `ls` command
-alias ls='ls -G'
-alias lsa='ls -la'
+# ls command colors
+alias ls='ls --Color=auto'
+alias lsa='ls -la --Color=auto'
 
-# webapps
-alias milk="open -na 'Google Chrome' --args '--app=https://www.rememberthemilk.com/app '"
-alias webusb="open -a 'Google Chrome' --args '--disable-webusb-security'"
+# Weather and Moon display
+alias weather='curl http://wttr.in/'
+alias moon='curl http://wttr.in/Moon'
